@@ -43,7 +43,7 @@ from Fountain.data import create_dataloader,create_batchind_dict
 import Fountain.layer
 from Fountain.fountain import Fountain
   ```
-*  You can chick  [MB.h5ad](https://drive.google.com/file/d/1qwKP1xzYVs5rEGRJPU_NJga2Gl0qSTv5/view?usp=sharing) to download the example. 
+*  You can chick  [MB.h5ad](https://drive.google.com/file/d/1qwKP1xzYVs5rEGRJPU_NJga2Gl0qSTv5/view?usp=sharing) to download the example dataset. 
 
 
 * After data preprocessing, you should load the raw count matrix scATAC-seq data via:
