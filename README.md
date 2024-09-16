@@ -143,7 +143,7 @@ import matplotlib.pyplot as plt
 * You could achieve online integration as follow:
   
   ```python
-  online_emb=model.get_latent(adata,device=device,emb='online')
+  model.get_latent(adata,device=device,emb='online')
   ```
 
 
