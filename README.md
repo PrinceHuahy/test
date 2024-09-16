@@ -8,7 +8,7 @@
 It's prefered to create a new environment for Fountain
 
 ```
-conda create -n Fountain python==3.9
+conda create -n Fountain python==3.8
 conda activate Fountain
 ```
 
