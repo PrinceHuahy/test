@@ -1,7 +1,7 @@
 [![PyPI](https://img.shields.io/pypi/v/scFountain.svg)](https://pypi.org/project/scFountain/)
 
 # Rigorous integration of single-cell ATAC-seq data using regularized barycentric mapping
-
+![](Fountain.png)
 
 ## Package installation
 
