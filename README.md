@@ -20,13 +20,9 @@ pip install scFountain
 
 Installation via Github is also provided
 
-```
-git clone https://github.com/Biox-NKU/Fountain
-cd Fountain
-pip install Fountain-0.0.9-py3-none-any.whl
-```
 
-This process will take approximately 5 to 10 minutes, depending on the user's computer device and internet connectivition.
+
+This process will take approximately 2 to 10 minutes, depending on the user's computer device and internet connectivition.
 
 ## Quick Start
 
@@ -88,7 +84,8 @@ import matplotlib.pyplot as plt
   
   ```python
   batchind_dict=create_batchind_dict(adata,batch_name='batch')
-  dataloader=create_dataloader(adata,batch_size=256,batchind_dict=batchind_dict,batch_name='batch',num_worker=4,droplast=True)
+  batchsize=min(128*len(batchind_dict),1024)
+  dataloader=create_dataloader(adata,batch_size=batchsize,batchind_dict=batchind_dict,batch_name='batch',num_worker=4,droplast=True)
   enc=[['fc', 1024, '', 'gelu'],['fc', 256, '', 'gelu'],['fc', 16, '', '']]
   dec=[['fc', adata.X.shape[1], '', '']]
   #early_stopping= EarlyStopping_simple(patience=30)
