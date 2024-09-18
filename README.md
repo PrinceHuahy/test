@@ -24,11 +24,15 @@ Installation via Github is also provided
 
 This process will take approximately 2 to 10 minutes, depending on the user's computer device and internet connectivition.
 
+## Tutorial
+
+Usage and examples of Fountain's main functions are showed in [tutorial](https://github.com/BioX-NKU/Fountain/Tutorial.ipynb).
+
+
+
 ## Quick Start
 
 Fountain is a deep learning framework for batch integration on scATAC-seq data utilizing  regularized barycentric mapping. Fountain could be easily used following: generating batch-corrected low-dimensional embeddings, generating batch-corrected and enhanced ATAC profiles in the original dimension, and online integration. 
-
-Usage and examples of Fountain's main functions are showed in [tutorial](https://github.com/BioX-NKU/Fountain/Tutorial.ipynb).
 
 
 ### Input format
@@ -38,8 +42,8 @@ Usage and examples of Fountain's main functions are showed in [tutorial](https:/
 * **count matrix file**:  
 	* Rows correspond to peaks and columns to cells.
 
-* **Batch label and cell type label**:  
-	* The batch label and cell type label are included in anndata.obs.
+* **batch label and cell type label**:  
+	* The batch label and cell type labels are included in anndata.obs. Cell type labels are used for indicator evaluation, rather than being necessary for training
 
 
 ### 1. Data preprocessing
@@ -100,11 +104,11 @@ import matplotlib.pyplot as plt
   ```python
   model.train(            
             dataloader,             
-            lambda_mse=0.005, #
-            lambda_Eigenvalue=0.5,#
-            eigenvalue_type='mean',#'mean' or 'normal'
-            max_iteration=30000,###
-            mid_iteration=3000,###
+            lambda_mse=0.005, 
+            lambda_Eigenvalue=0.5,
+            eigenvalue_type='mean',
+            max_iteration=30000,
+            mid_iteration=3000,
             loss='Negative_multinomial',
             early_stopping=early_stopping,
             device=device, 
